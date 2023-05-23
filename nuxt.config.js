@@ -1,11 +1,7 @@
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
-  ssr: false,
-  router: {
-    base: '/pokedex/'
-  }
-  ,
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'pokedex',
