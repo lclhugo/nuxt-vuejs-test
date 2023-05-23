@@ -21,6 +21,5 @@
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^5.3.3",
     "postcss": "^8.4.17"
-  },
-  "deploy": "yarn generate && push-dir --dir=dist --branch=gh-pages --cleanup"
+  }
 }
