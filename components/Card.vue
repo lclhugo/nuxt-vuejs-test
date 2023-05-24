@@ -2,21 +2,21 @@
 
   <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
 
-    <a :href="`/pokemon/${index + 1}`" class="block overflow-hidden rounded-t-lg">
+    <a :href="`/pokemon/${pokemon.id}`" class="block overflow-hidden rounded-t-lg">
       <img class="w-full h-56 object-cover"
-           :src="`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${index + 1}.png`"
+           :src="`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`"
            alt="pokemon">
     </a>
     <div class="p-5 text-center">
 
-      <a :href="`/pokemon/${index + 1}`">
+      <a :href="`/pokemon/${pokemon.id}`">
         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white capitalize">{{ pokemon.name }}</h5>
       </a>
 
       <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 capitalize">
         {{ pokemon.types && pokemon.types[0].type.name }}
         {{ pokemon.types && pokemon.types[1] ? '/ ' + pokemon.types[1].type.name : '' }}</p>
-      <a :href="`/pokemon/${index + 1} `" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+      <a :href="`/pokemon/${pokemon.id} `" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
         See more
         <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20"
              xmlns="http://www.w3.org/2000/svg">
@@ -35,7 +35,7 @@
 export default {
   name: 'Card',
   props: {
-    poke: {
+    pokemon: {
       type: Object,
       required: true
     },
@@ -43,18 +43,6 @@ export default {
       type: Number,
       required: true
     }
-  },
-  data() {
-    return {
-      pokemon: {}
-    }
-  },
-  mounted() {
-    fetch(`https://pokeapi.co/api/v2/pokemon/${this.index + 1}`)
-      .then(response => response.json())
-      .then(data => {
-        this.pokemon = data
-      })
   }
 }
 
