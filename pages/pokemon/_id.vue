@@ -61,16 +61,25 @@
         </div>
       </div>
 
-      <!--Stats-->
+      <!--Stats in a table-->
       <div class="border border-gray-700 py-8">
         <h2 class="text-4xl  text-center font-semibold text-gray-100 capitalize">Stats</h2>
-        <div class="flex justify-center">
-          <div v-for="stat in pokemon.stats" :key="stat.stat.name"
-               class="bg-gray-700 rounded-full px-4 py-2 m-4 capitalize">
-            <p class="text-gray-100">{{ stat.stat.name }}: {{ stat.base_stat }}</p>
-          </div>
-        </div>
+        <table class="table-auto w-8/12 mx-auto">
+          <thead>
+          <tr>
+            <th class="px-4 py-2 text-gray-100">Name</th>
+            <th class="px-4 py-2 text-gray-100">Base stat</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr v-for="stat in pokemon.stats" :key="stat.stat.name">
+            <td class="border px-4 py-2 text-gray-100 capitalize">{{ stat.stat.name }}</td>
+            <td class="border px-4 py-2 text-gray-100 text-center">{{ stat.base_stat }}</td>
+          </tr>
+          </tbody>
+        </table>
       </div>
+      
 
       <!--Moves in a table with how they are learned-->
       <div class="border border-gray-700 py-8">
