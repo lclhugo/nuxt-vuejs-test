@@ -1,4 +1,4 @@
-# pokedex
+# Small 'pokedex' app using PokeAPI and Nuxt.js (Vue.js)
 
 Deployed at: https://nuxt-vuejs-test-wnx6.vercel.app using Vercel
 
