@@ -1,5 +1,8 @@
 # pokedex
 
+Deployed at: https://nuxt-vuejs-test-wnx6.vercel.app using Vercel
+
+
 ## Build Setup
 
 ```bash
