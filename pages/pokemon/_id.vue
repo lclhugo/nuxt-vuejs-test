@@ -1,6 +1,8 @@
 <!-- Page to show a single pokemon and its details -->
 
 <template>
+  <div>
+    <MainNav />
   <main class="bg-gray-900 min-h-screen py-8">
 
     <div class="flex justify-evenly mb-8">
@@ -79,7 +81,7 @@
           </tbody>
         </table>
       </div>
-      
+
 
       <!--Moves in a table with how they are learned-->
       <div class="border border-gray-700 py-8">
@@ -119,10 +121,16 @@
 
 
   </main>
+  </div>
 </template>
 
 <script>
+import MainNav from "@/components/MainNav.vue";
+
 export default {
+  components: {
+    MainNav
+  },
   name: 'Pokemon',
   data() {
     return {

@@ -1,5 +1,7 @@
 <!-- Pokemon generation 1 -->
 <template>
+  <div>
+    <MainNav/>
       <main class="bg-gray-900 min-h-screen">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
           <div class="py-8">
@@ -10,14 +12,17 @@
           </div>
         </div>
     </main>
+  </div>
 </template>
 
 <script>
 import Card from '@/components/Card.vue'
+import MainNav from '@/components/MainNav.vue'
  export default {
    name: 'Home',
    components: {
-     Card
+     Card,
+     MainNav
    },
    data() {
      return {
@@ -49,4 +54,3 @@ import Card from '@/components/Card.vue'
 
 
 
-       
